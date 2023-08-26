@@ -1,0 +1,46 @@
+void bubble_sort(int v[], int n) {
+    for (int i = n - 1; i > 0; i--) { // 
+        int trocou = 0;               //   
+                                      //
+        for (int j = 0; j < i; j++) { //     para cada j em (0, 1, 2, ..., i-1)
+            if (v[j] > v[j + 1]) {    //         se v[j] > v[j+1]
+                troca(v, j, j + 1);   //             troca v[j] e v[j+1]
+                trocou = 1;           //             tr
+            }                         //
+        }                             //
+                                      //
+        if (!trocou) {                //     se não trocou
+            break;                    //         interrompe o loop
+        }                             //
+    }                                 //
+}   
+
+void selection_sort(int v[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int m = i;
+
+        for (int j = i + 1; j < n; j++) {
+            if (v[m] > v[j]) {
+                m = j;
+            }
+        }
+
+        if (m != i) {
+            troca(v, m, i);
+        }
+    }
+}
+
+void insertion_sort(int v[], int n) {
+    for (int i = 1; i < n; i++) {
+        int temp = v[i];
+
+        int j = i;
+        while (j > 0 && v[j - 1] > temp) {
+            v[j] = v[j - 1];
+            j--;
+        }
+
+        v[j] = temp;
+    }
+}

@@ -1,0 +1,4 @@
+14:55:30 ./q3 started 
+14:55:44 ./q3 finished 
+14:55:48 ./q3 started 
+14:56:02 ./q3 finished 
